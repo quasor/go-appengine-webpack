@@ -1,6 +1,7 @@
 Base project I use to start my app engine projects.
 
-==Usage==
+Usage
+=====
 Getting started:
 
  npm install
@@ -21,6 +22,7 @@ Deploy to app engine
 
 Other commands, see package.json. Includes: doc, rollback, fmt, and test
 
-== Note ==
+Note
+=====
 
 I welcome pull requests, don't hesitate to contact me.
