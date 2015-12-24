@@ -1,0 +1,17 @@
+{
+  "scripts": {
+    "serve": "concurrent --kill-others \"goapp serve app_local.yaml\"",
+    "serve-prod": "concurrent --kill-others \"goapp serve app.yaml\"",
+    "deploy": "goapp deploy"
+  },
+  "betterScripts": {
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "concurrently": "^0.1.1"
+  },
+  "engines": {
+    "node": "4.1.1"
+  }
+}

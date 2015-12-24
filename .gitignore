@@ -1,4 +1,6 @@
-.gopath/*
+/gopath
+/node_modules
+/npm-debug.log
 
 # Created by .ignore support plugin (hsz.mobi)
 ### Windows template

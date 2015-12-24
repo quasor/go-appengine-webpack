@@ -1,9 +1,11 @@
 package main
 
 import (
-	"fmt"
+  _ "api"
+  "math/rand"
+  "time"
 )
 
-func main() {
-	fmt.Printf("Hello world!\n")
+func init() {
+  rand.Seed(time.Now().UTC().UnixNano())
 }
