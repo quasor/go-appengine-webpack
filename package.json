@@ -1,8 +1,12 @@
 {
   "scripts": {
-    "serve": "concurrent --kill-others \"goapp serve app_local.yaml\"",
+    "serve": "concurrent --kill-others \"goapp serve app_local.yaml\" --host=0.0.0.0",
     "serve-prod": "concurrent --kill-others \"goapp serve app.yaml\"",
-    "deploy": "goapp deploy"
+    "doc": "concurrent --kill-others \"godoc -http=:6060\"",
+    "tests": "goapp test",
+    "rollback": "appcfg.sh rollback",
+    "deploy": "goapp deploy",
+    "fmt": "goapp fmt"
   },
   "betterScripts": {
   },
