@@ -1,5 +1,12 @@
 Base project I use to start my app engine projects.
 
+Packages:
+* Weppack
+* Bootstrap
+* Sass
+* Jquery
+* Postcss
+
 Usage
 =====
 Getting started:

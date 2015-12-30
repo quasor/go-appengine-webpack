@@ -1,13 +1,14 @@
 {
   "scripts": {
-    "serve": "concurrent --kill-others \"goapp serve --host=0.0.0.0 app_local.yaml\" \"webpack --verbose --colors --display-error-details --config webpack.uat.config.js --watch\"",
-    "serve-prod": "concurrent --kill-others \"goapp serve app.yaml\" \"webpack --verbose --colors --display-error-details --config webpack.config.js --watch\"",
-    "doc": "concurrent --kill-others \"godoc -http=:6060\"",
+    "serve": "concurrent --kill-others \"goapp serve --host=0.0.0.0 app_local.yaml\" \"npm run watch\"",
+    "serve-prod": "npm run build-prod && concurrent --kill-others \"goapp serve --host=0.0.0.0 app.yaml\"",
+    "doc": "godoc -http=:6060",
     "build": "webpack --verbose --colors --display-error-details --config webpack.uat.config.js",
+    "watch": "webpack --verbose --colors --display-error-details --config webpack.uat.config.js --watch",
     "build-prod": "webpack --verbose --colors --display-error-details --config webpack.config.js --optimize-minimize",
     "tests": "goapp test",
     "rollback": "appcfg.sh rollback",
-    "deploy": "goapp deploy",
+    "deploy": "npm run build-prod && goapp deploy",
     "fmt": "goapp fmt"
   },
   "betterScripts": {},
