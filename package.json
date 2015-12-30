@@ -1,7 +1,7 @@
 {
   "scripts": {
-    "serve": "concurrent --kill-others \"goapp serve --host=0.0.0.0 app_local.yaml\"",
-    "serve-prod": "concurrent --kill-others \"goapp serve app.yaml\"",
+    "serve": "concurrent --kill-others \"goapp serve --host=0.0.0.0 app_local.yaml\" \"webpack --verbose --colors --display-error-details --config webpack.uat.config.js --watch\"",
+    "serve-prod": "concurrent --kill-others \"goapp serve app.yaml\" \"webpack --verbose --colors --display-error-details --config webpack.config.js --watch\"",
     "doc": "concurrent --kill-others \"godoc -http=:6060\"",
     "build": "webpack --verbose --colors --display-error-details --config webpack.uat.config.js",
     "build-prod": "webpack --verbose --colors --display-error-details --config webpack.config.js --optimize-minimize",
