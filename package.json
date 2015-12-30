@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "serve": "concurrent --kill-others \"goapp serve --host=0.0.0.0 app_local.yaml\" \"npm run watch\"",
+    "serve": "concurrent --kill-others \"goapp serve --host=0.0.0.0 app_dev.yaml\" \"npm run watch\"",
     "serve-prod": "npm run build-prod && concurrent --kill-others \"goapp serve --host=0.0.0.0 app.yaml\"",
     "doc": "godoc -http=:6060",
     "build": "webpack --verbose --colors --display-error-details --config webpack.dev.config.js",
