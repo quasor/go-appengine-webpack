@@ -19,8 +19,7 @@ var webpackConfig = {
       loaders: [
         { test: /\.css$/, loaders: [ 'style', 'css', 'postcss' ] },
         { test: /\.scss$/, loaders: [ 'style', 'css', 'postcss', 'sass' ] },
-        { test: /\.(woff2?|ttf|eot|svg)$/, loader: 'url?limit=10000' },
-        { test: /bootstrap-sass\/assets\/javascripts\//, loader: 'imports?jQuery=jquery' }
+        { test: /\.(woff2?|ttf|eot|svg)$/, loader: 'url?limit=10000' }
       ]
   }
 }
