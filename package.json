@@ -1,16 +1,31 @@
 {
   "scripts": {
-    "serve": "concurrent --kill-others \"goapp serve app_local.yaml\" --host=0.0.0.0",
+    "serve": "concurrent --kill-others \"goapp serve --host=0.0.0.0 app_local.yaml\"",
     "serve-prod": "concurrent --kill-others \"goapp serve app.yaml\"",
     "doc": "concurrent --kill-others \"godoc -http=:6060\"",
+    "build": "webpack --verbose --colors --display-error-details --config webpack.uat.config.js",
+    "postinstall": "webpack --display-error-details --config webpack.uat.config.js",
+    "build-prod": "webpack --verbose --colors --display-error-details --config webpack.config.js",
+    "postinstall-prod": "webpack --display-error-details --config webpack.config.js",
     "tests": "goapp test",
     "rollback": "appcfg.sh rollback",
     "deploy": "goapp deploy",
     "fmt": "goapp fmt"
   },
-  "betterScripts": {
-  },
+  "betterScripts": {},
   "dependencies": {
+    "bootstrap-sass": "^3.3.5",
+    "bootstrap-sass-loader": "^1.0.9",
+    "clean-webpack-plugin": "^0.1.4",
+    "concurrently": "^0.1.1",
+    "css-loader": "^0.23.1",
+    "extract-text-webpack-plugin": "^0.9.1",
+    "html-webpack-plugin": "^1.7.0",
+    "sass-loader": "^3.1.2",
+    "style-loader": "^0.13.0",
+    "webpack": "^1.12.9",
+    "webpack-dev-middleware": "^1.4.0",
+    "webpack-hot-middleware": "^2.5.0"
   },
   "devDependencies": {
     "concurrently": "^0.1.1"
