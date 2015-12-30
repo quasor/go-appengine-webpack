@@ -1,6 +1,13 @@
 /gopath
 /node_modules
 /npm-debug.log
+/static/*.woff2
+/static/*.svg
+/static/*.ttf
+/static/*.eot
+/static/*.woff
+/static/*.js
+/static/*.html
 
 # Created by .ignore support plugin (hsz.mobi)
 ### Windows template
